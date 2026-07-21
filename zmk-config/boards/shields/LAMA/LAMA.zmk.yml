@@ -1,0 +1,8 @@
+file_format: "1"
+id: LAMA
+name: LAMA
+type: shield
+url: https://github.com/sean9061/LAMA
+requires: [seeeduino_xiao_ble]
+features:
+  - keys

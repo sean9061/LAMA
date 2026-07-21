@@ -1,0 +1,5 @@
+config SHIELD_LAMA_R
+    def_bool $(shields_list_contains,LAMA_R)
+
+config SHIELD_LAMA_L
+    def_bool $(shields_list_contains,LAMA_L)
