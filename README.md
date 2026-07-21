@@ -1,29 +1,22 @@
-# roBa
-roBaは[keyball](https://github.com/Yowkees/keyball/)に影響を受けたワイヤレスキーボードです  
+# LAMA
+
+LAMAは[roBa](https://github.com/kumamuk-git/roBa)を改造した自作ワイヤレスキーボードです。  
+roBa自体は[keyball](https://github.com/Yowkees/keyball/)に影響を受けたキーボードです。  
 ![alt text](doc/img/roba.png)
-特徴:
+特徴（roBaベース、改造により変更予定）:
 + ZMK firmwareによるbluetooth(BLE)対応
-+ 分割カラムスタッガード配列(キー数:42)
++ 分割カラムスタッガード配列
 + トラックボール搭載
-+ 水平ロータリーエンコーダ搭載（v1: evqwgd001, v2以降: [CKW12](https://github.com/kumamuk-git/CKW12/tree/main)）
++ 水平ロータリーエンコーダ搭載
 
-## Where to Buy
+## Build Guide / Firmware
 
-[BOOTH](https://kumamuk.booth.pm/)にて組み立てキットが購入可能
+現時点ではroBa本家のドキュメント・リポジトリを参考にしています。改造内容が固まり次第、このリポジトリ独自の内容に更新予定です。
++ [roBa本家 Build Guide](https://github.com/kumamuk-git/roBa/blob/main/doc/v3/buildguide_v3.md)
++ [roBa本家 ZMK config](https://github.com/kumamuk-git/zmk-config-roBa)
 
-## Build Guide
+## License
 
-ビルドガイドは[こちら](https://github.com/kumamuk-git/roBa/blob/main/doc/v3/buildguide_v3.md)
-
-## Firmware
-
-ファームウェアのリポジトリは[こちら](https://github.com/kumamuk-git/zmk-config-roBa)  
-デフォルトでは以下のように設定されています
-+ オートマウスレイヤー：4
-+ スクロールレイヤー：5  
-+ CPI：400
-
-ファームウェア、キーマップの編集手順は[こちら](https://github.com/kumamuk-git/roBa/blob/main/doc/v3/buildguide_v3.md#6%E3%82%AD%E3%83%BC%E3%83%9E%E3%83%83%E3%83%97%E3%81%AE%E7%B7%A8%E9%9B%86)  
-（ZMK STUDIOでもキーマップ編集可能）
+[GPLv3](LICENSE)。[roBa](https://github.com/kumamuk-git/roBa)をベースにした派生プロジェクトです。
 
 
