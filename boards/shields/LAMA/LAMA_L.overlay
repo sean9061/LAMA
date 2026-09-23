@@ -1,14 +1,14 @@
 #include "LAMA.dtsi"
 
 &kscan0 {
-        col-gpios
-            = <&xiao_d 10 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 9 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 8 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 7 GPIO_ACTIVE_HIGH>
-            , <&gpio0 10 GPIO_ACTIVE_HIGH>
-            , <&gpio0 9 GPIO_ACTIVE_HIGH>
-            , <&gpio1 7 GPIO_ACTIVE_HIGH>
+        col-gpios  // PCBのCol0-Col6の順
+            = <&xiao_d 10 GPIO_ACTIVE_HIGH>   // Col0 増設列 (D10)
+            , <&gpio1 7 GPIO_ACTIVE_HIGH>     // Col1 (P1.07 / D19)
+            , <&xiao_d 9 GPIO_ACTIVE_HIGH>    // Col2
+            , <&xiao_d 8 GPIO_ACTIVE_HIGH>    // Col3
+            , <&xiao_d 7 GPIO_ACTIVE_HIGH>    // Col4
+            , <&gpio0 10 GPIO_ACTIVE_HIGH>    // Col5 (P0.10 / D15)
+            , <&gpio0 9 GPIO_ACTIVE_HIGH>     // Col6 (P0.09 / D14)
             ;
 };
 
