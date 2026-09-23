@@ -30,6 +30,10 @@ GitHub Actions（`.github/workflows/build.yml` → `zmkfirmware/zmk/.github/work
 
 `config/west.yml`はZMK `v0.3-branch` + `kumamuk-git/zmk-pmw3610-driver`(main)に**意図的に固定**。PMW3610ドライバがこの組み合わせでのみ動作確認されているため。バージョンを上げる前にこの制約を確認すること。
 
+LEDは `caksoylar/zmk-rgbled-widget`（`v0.3-branch`、ZMKのバージョンと必ず揃える）で、XIAO内蔵のRGB LEDにBluetoothの接続状態を表示している（`build.yaml` の `rgbled_adapter` shield）。layer_6の `&ind_con` で状態を再表示できる。
+
+電池（`BAT_RAW`）はXIAOのどのピンにも繋がっておらず残量を測れないため、`CONFIG_ZMK_BATTERY_REPORTING=n` にしている。
+
 `.github/workflows/draw.yml`（keymap-drawer、手動実行のみ）は `keymap_drawer.config.yaml` を参照するが、そのファイルはまだ存在しない。
 
 ### シールド構成 (`boards/shields/LAMA/`)
