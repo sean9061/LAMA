@@ -5,8 +5,10 @@
 include:
  - board: seeeduino_xiao_ble
    shield: LAMA_R rgbled_adapter
+   artifact-name: LAMA_R-seeeduino_xiao_ble-zmk
    snippet: studio-rpc-usb-uart
  - board: seeeduino_xiao_ble
    shield: LAMA_L rgbled_adapter
+   artifact-name: LAMA_L-seeeduino_xiao_ble-zmk
  - board: seeeduino_xiao_ble
    shield: settings_reset
