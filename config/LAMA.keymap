@@ -4,9 +4,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-/* 本家roBaのkeymapをベースに、左右の増設列(小指側、各行の最初と最後の&none/&trans)を追加。
-   増設キーの用途は未定なので&none(既定レイヤー)/&trans(上位レイヤー)にしてあります。
-   実際に使うキーが決まったらKeymapEditor等で書き換えてください。
+/* 本家roBaのkeymapをベースに、左右の増設列(小指側、各行の最初と最後)を追加。
+   増設列は普通のキーボードに合わせて 左: Tab/Esc/Shift/⌃↑(Mission Control)、
+   右: BS/Enter/Shift/⌘Space(Spotlight)。上位レイヤーでは&transで透過させている。
    combosは増設によりキー位置番号が変わるため、このコミットでは一旦外しています。
    必要であればKeymapEditorで作り直してください。 */
 
@@ -59,10 +59,10 @@
 
         default_layer {
             bindings = <
-&none  &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P    &none
-&none  &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT  &none
-&none  &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH  &none
-&none  &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANG2       &lt 2 SPACE  &lt_to_layer_0 3 LANG1             &kp BACKSPACE  &lt 1 ENTER                             &kp DEL  &none
+&kp TAB           &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P    &kp BACKSPACE
+&kp ESCAPE        &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT  &kp ENTER
+&kp LSHIFT        &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp RSHIFT
+&kp LC(UP_ARROW)  &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANG2       &lt 2 SPACE  &lt_to_layer_0 3 LANG1             &kp BACKSPACE  &lt 1 ENTER                             &kp DEL  &kp LG(SPACE)
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
