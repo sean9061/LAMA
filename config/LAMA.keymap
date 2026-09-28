@@ -7,7 +7,8 @@
 /* 本家roBaのkeymapをベースに、左右の増設列(小指側、各行の最初と最後)を追加。
    増設列は 左: Esc/Tab/Shift/⌃↑(Mission Control)、
    右: BS/Enter/Shift/⌘Space(Spotlight)。上位レイヤーでは&transで透過させている。
-   右手row3のCol4(旧Del)はF18。VoiceOSの音声入力のトリガーに設定して使う。
+   右手row3のCol4(旧Del)は右⌘(RGUI)。VoiceOSの音声入力のトリガーに設定して使う
+   (VoiceOSはF13以降のキーをトリガーにできなかった)。
    combosは増設によりキー位置番号が変わるため、このコミットでは一旦外しています。
    必要であればKeymapEditorで作り直してください。 */
 
@@ -63,7 +64,7 @@
 &kp ESCAPE        &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P    &kp BACKSPACE
 &kp TAB           &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT  &kp ENTER
 &kp LSHIFT        &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp RSHIFT
-&kp LC(UP_ARROW)  &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANG2       &lt 2 SPACE  &lt_to_layer_0 3 LANG1             &kp BACKSPACE  &lt 1 ENTER                             &kp F18  &kp LG(SPACE)
+&kp LC(UP_ARROW)  &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANG2       &lt 2 SPACE  &lt_to_layer_0 3 LANG1             &kp BACKSPACE  &lt 1 ENTER                             &kp RGUI  &kp LG(SPACE)
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -71,9 +72,9 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11  &trans
+&trans  &trans  &kp C_BRI_DN  &kp C_BRI_UP  &trans        &trans                                     &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans
+&trans  &trans  &kp C_PREV    &kp C_PP      &kp C_NEXT    &trans  &trans                    &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &trans  &trans                    &trans   &trans  &trans  &trans  &trans  &kp F11  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12  &trans
             >;
         };

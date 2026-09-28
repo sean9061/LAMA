@@ -56,7 +56,9 @@ LEDは `caksoylar/zmk-rgbled-widget`（`v0.3-branch`、ZMKのバージョンと�
 - L側エンコーダの押し込みスイッチ（SW21）はPCB上でpad 1/2が未配線（D21のアノードもどこにも繋がっていない）。keymap上は位置を確保してあるが、押しても反応しない
 - `config/LAMA.keymap` のcomboは増設でキー位置番号が変わるため削除済み。必要ならKeymapEditorで作り直す
 - 増設列はデフォルトレイヤーで 左: Esc/Tab/Shift/⌃↑、右: BS/Enter/Shift/⌘Space。上位レイヤーは `&trans`
-- 右手row3のCol4（旧Del）は `F18`。VoiceOSの音声入力のトリガーをF18に設定して使う。Delはキーマップから無くなった
+- 右手row3のCol4（旧Del）は右⌘（`RGUI`）。VoiceOSの音声入力のトリガーに設定して使う（VoiceOSはF13以降をトリガーにできない）。Delはキーマップから無くなった
+- FUNCTIONレイヤーの左手はメディアキー（W/E: 明るさ-/+、S/D/F: 前の曲/再生停止/次の曲、X/C/V: ミュート/音量-/+）
+- キーボードにはZMK Studio経由で保存したキーマップがあり、ファームウェアのキーマップより優先される。keymapファイルを変えたら、Studio側も同じにする（またはStudioで Restore Stock Settings）
 - 物理レイアウト（`LAMA.dtsi` / `config/LAMA.json`）はPCBのスイッチ座標から生成している
 
 ---
