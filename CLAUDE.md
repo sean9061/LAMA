@@ -56,7 +56,7 @@ LEDは `caksoylar/zmk-rgbled-widget`（`v0.3-branch`、ZMKのバージョンと�
 - L側エンコーダの押し込みスイッチ（SW21）はPCB上でpad 1/2が未配線（D21のアノードもどこにも繋がっていない）。keymap上は位置を確保してあるが、押しても反応しない
 - `config/LAMA.keymap` のcomboは増設でキー位置番号が変わるため削除済み。必要ならKeymapEditorで作り直す
 - 増設列はデフォルトレイヤーで 左: Esc/Tab/Shift/⌃↑、右: BS/Enter/Shift/⌘Space。上位レイヤーは `&trans`
-- 右手row3のCol4（旧Del）は `F18`。Mac側のKarabiner-Elements（`~/.config/karabiner/karabiner.json`、LAMAのVID `0x1d50`/PID `0x615e` 限定のルール）で `fn` に変換し、VoiceOSの音声入力トリガーにしている。Delはキーマップから無くなった
+- 右手row3のCol4（旧Del）は `F18`。VoiceOSの音声入力のトリガーをF18に設定して使う。Delはキーマップから無くなった
 - 物理レイアウト（`LAMA.dtsi` / `config/LAMA.json`）はPCBのスイッチ座標から生成している
 
 ---

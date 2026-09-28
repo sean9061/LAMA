@@ -7,8 +7,7 @@
 /* 本家roBaのkeymapをベースに、左右の増設列(小指側、各行の最初と最後)を追加。
    増設列は 左: Esc/Tab/Shift/⌃↑(Mission Control)、
    右: BS/Enter/Shift/⌘Space(Spotlight)。上位レイヤーでは&transで透過させている。
-   右手row3のCol4(旧Del)はF18。Mac側のKarabiner-ElementsでLAMAのF18だけをfnに変換し、
-   VoiceOSの音声入力のトリガーに使っている。
+   右手row3のCol4(旧Del)はF18。VoiceOSの音声入力のトリガーに設定して使う。
    combosは増設によりキー位置番号が変わるため、このコミットでは一旦外しています。
    必要であればKeymapEditorで作り直してください。 */
 
