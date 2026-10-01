@@ -57,7 +57,7 @@ LEDは `caksoylar/zmk-rgbled-widget`（`v0.3-branch`、ZMKのバージョンと�
 - `config/LAMA.keymap` のcomboは増設でキー位置番号が変わるため削除済み。必要ならKeymapEditorで作り直す
 - 増設列はデフォルトレイヤーで 左: Esc/Tab/Shift/⌃↑、右: BS/Enter/Shift/⌘Space。上位レイヤーは `&trans`
 - 右手row3のCol4（旧Del）は右⌘（`RGUI`）。VoiceOSの音声入力のトリガーに設定して使う（VoiceOSはF13以降をトリガーにできない）。Delはキーマップから無くなった
-- FUNCTIONレイヤーの左手はメディアキー（W/E: 明るさ-/+、S/D/F: 前の曲/再生停止/次の曲、X/C/V: ミュート/音量-/+）
+- FUNCTIONレイヤーの左手はメディアキー（W/E: 明るさ-/+、S/D/F: 前の曲/再生停止/次の曲、X/C/V: ミュート/音量-/+）とスクショ（T: ⇧⌘4、G: ⇧⌘5）。NUMレイヤーの数字はテンキーなので、Macのスクショのショートカットには使えない
 - キーボードにはZMK Studio経由で保存したキーマップがあり、ファームウェアのキーマップより優先される。keymapファイルを変えたら、Studio側も同じにする（またはStudioで Restore Stock Settings）
 - 物理レイアウト（`LAMA.dtsi` / `config/LAMA.json`）はPCBのスイッチ座標から生成している
 
