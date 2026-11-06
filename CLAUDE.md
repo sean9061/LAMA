@@ -59,6 +59,7 @@ LEDは `caksoylar/zmk-rgbled-widget`（`v0.3-branch`、ZMKのバージョンと�
 - 右手row3のCol4（旧Del）は右⌘（`RGUI`）。VoiceOSの音声入力のトリガーに設定して使う（VoiceOSはF13以降をトリガーにできない）。Delはキーマップから無くなった
 - FUNCTIONレイヤーの左手はメディアキー（W/E: 明るさ-/+、S/D/F: 前の曲/再生停止/次の曲、X/C/V: ミュート/音量-/+）とスクショ（T: ⇧⌘4、G: ⇧⌘5）。NUMレイヤーの数字はテンキーなので、Macのスクショのショートカットには使えない
 - ARROWレイヤー（かな長押し）のX/Vはブラウザの戻る/進む（⌘[ / ⌘]）
+- オートマウスレイヤーは `CONFIG_PMW3610_MOVEMENT_THRESHOLD=5`（`LAMA_R.conf`）。0だとタイピングの振動で起動してしまう。誤爆するなら上げ、動かし始めが鈍いなら下げる
 - キーボードにはZMK Studio経由で保存したキーマップがあり、ファームウェアのキーマップより優先される。keymapファイルを変えたら、Studio側も同じにする（またはStudioで Restore Stock Settings）
 - 物理レイアウト（`LAMA.dtsi` / `config/LAMA.json`）はPCBのスイッチ座標から生成している
 
