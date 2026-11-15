@@ -1,0 +1,117 @@
+# keymap-drawer の設定(.github/workflows/draw.yml と、手元で図を作るときに使う)
+#   keymap parse -c 10 -z config/LAMA.keymap > keymap-drawer/LAMA.yaml
+#   keymap draw -j config/LAMA.json keymap-drawer/LAMA.yaml > keymap-drawer/LAMA.svg
+parse_config:
+  preprocess: true
+  skip_binding_parsing: false
+  trans_legend: { t: "▽", type: trans }
+  # Mac で使う前提の表記にする
+  zmk_keycode_map:
+    LEFT_WIN: "⌘"
+    LGUI: "⌘"
+    RGUI: "⌘"
+    LEFT_ALT: "⌥"
+    LALT: "⌥"
+    LCTRL: "⌃"
+    LEFT_CONTROL: "⌃"
+    LSHIFT: "⇧"
+    LEFT_SHIFT: "⇧"
+    RSHIFT: "⇧"
+    ESCAPE: "Esc"
+    TAB: "Tab"
+    BACKSPACE: "⌫"
+    ENTER: "⏎"
+    SPACE: "Space"
+    LANG1: "かな"
+    LANG2: "英数"
+    SQT: "'"
+    MINUS: "-"
+    COMMA: ","
+    DOT: "."
+    PERIOD: "."
+    SLASH: "/"
+    COLON: ":"
+    SEMICOLON: ";"
+    PLUS: "+"
+    ASTERISK: "*"
+    EQUAL: "="
+    CARET: "^"
+    AMPERSAND: "&"
+    TILDE: "~"
+    LEFT_PARENTHESIS: "("
+    RIGHT_PARENTHESIS: ")"
+    UNDERSCORE: "_"
+    EXCLAMATION: "!"
+    AT_SIGN: "@"
+    HASH: "#"
+    DOLLAR: "$"
+    PERCENT: "%"
+    LEFT_BRACKET: "["
+    RIGHT_BRACKET: "]"
+    LEFT_BRACE: "{"
+    RIGHT_BRACE: "}"
+    BACKSLASH: "\\"
+    PIPE: "|"
+    HOME: "Home"
+    END: "End"
+    NUMBER_1: "1"
+    NUMBER_2: "2"
+    NUMBER_3: "3"
+    KP_NUMBER_0: "0"
+    KP_NUMBER_1: "1"
+    KP_NUMBER_2: "2"
+    KP_NUMBER_3: "3"
+    KP_NUMBER_4: "4"
+    KP_NUMBER_5: "5"
+    KP_NUMBER_6: "6"
+    KP_NUMBER_7: "7"
+    KP_NUMBER_8: "8"
+    KP_NUMBER_9: "9"
+    UP_ARROW: "↑"
+    DOWN_ARROW: "↓"
+    LEFT_ARROW: "←"
+    RIGHT_ARROW: "→"
+    PG_UP: "PgUp"
+    PAGE_DOWN: "PgDn"
+    C_BRI_DN: "明るさ−"
+    C_BRI_UP: "明るさ＋"
+    C_PREV: "⏮"
+    C_PP: "⏯"
+    C_NEXT: "⏭"
+    C_MUTE: "ミュート"
+    C_VOL_DN: "音量−"
+    C_VOL_UP: "音量＋"
+  raw_binding_map:
+    "&kp LS(LG(S))": "⇧⌘S"
+    "&kp LS(LG(N4))": "⇧⌘4"
+    "&kp LS(LG(N5))": "⇧⌘5"
+    "&kp LC(UP_ARROW)": { t: "⌃↑", s: "Mission Control" }
+    "&kp LG(SPACE)": { t: "⌘Space", s: "Spotlight" }
+    "&kp LG(LBKT)": { t: "⌘[", s: "戻る" }
+    "&kp LG(RBKT)": { t: "⌘]", s: "進む" }
+    "&kp LC(TAB)": "⌃Tab"
+    "&kp LC(LS(TAB))": "⌃⇧Tab"
+    "&kp LC(LA(KP_NUMBER_0))": "⌃⌥0"
+    "&lt_to_layer_0 6 LANG2": { t: "英数", h: "SYSTEM" }
+    "&lt_to_layer_0 3 LANG1": { t: "かな", h: "ARROW" }
+    "&mkp MB1": "左クリック"
+    "&mkp MB2": "右クリック"
+    "&mkp MB3": "中クリック"
+    "&ind_con": { t: "接続表示", s: "LED" }
+    "&bootloader": "Boot"
+    "&bt BT_CLR": "BT消去"
+    "&bt BT_CLR_ALL": "BT全消去"
+    "&bt BT_SEL 0": "BT0"
+    "&bt BT_SEL 1": "BT1"
+    "&bt BT_SEL 2": "BT2"
+    "&bt BT_SEL 3": "BT3"
+    "&bt BT_SEL 4": "BT4"
+draw_config:
+  key_w: 60
+  key_h: 56
+  combo_w: 28
+  combo_h: 26
+  inner_pad_w: 2
+  inner_pad_h: 2
+  dark_mode: auto
+  draw_key_sides: true

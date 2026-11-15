@@ -9,7 +9,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 リポジトリは**2つの独立した領域**からなる:
 
-1. **ハードウェア** (`pcb/`, `case/`, `doc/`) — KiCadプロジェクトとケースSTL
+1. **ハードウェア** (`pcb/`) — KiCadプロジェクト。roBa本家のビルドガイド・写真・ケースは2026-11-15に削除した（組み立てとケースはroBa本家のリポジトリを参照する。READMEのクレジットは必ず残す）
 2. **ファームウェア** (`config/`, `boards/`, `zephyr/`, `build.yaml`, `.github/workflows/`) — ZMK config（旧`zmk-config/`から直下へ展開済み。ZMKのuser-config構成をそのままリポジトリルートに置いている）
 
 ---
@@ -36,7 +36,7 @@ LEDは `caksoylar/zmk-rgbled-widget`（`v0.3-branch`、ZMKのバージョンと�
 
 キー配置図は `doc/keymap.html`（ブラウザで開くと押したキーが光る）。`python3 doc/keymap_gen.py` で `config/LAMA.keymap` と `config/LAMA.json` から生成するので、keymapを変えたら実行し直す。
 
-`.github/workflows/draw.yml`（keymap-drawer、手動実行のみ）は `keymap_drawer.config.yaml` を参照するが、そのファイルはまだ存在しない。
+`.github/workflows/draw.yml`（keymap-drawer、手動実行のみ）は `keymap_drawer.config.yaml` を使い、`keymap-drawer/LAMA.svg`（README に載せている図）を作り直してコミットする。keymapを変えたら実行する。
 
 ### シールド構成 (`boards/shields/LAMA/`)
 
@@ -83,7 +83,7 @@ LEDは `caksoylar/zmk-rgbled-widget`（`v0.3-branch`、ZMKのバージョンと�
 - `ROBA_V6_FP` — `pcb/KiCADv6/footprints.pretty`
 - `ROBA_V6_SYM` — `pcb/KiCADv6`
 
-**注意**: 現在これらは `/Users/seanfisher/Zatu_Projects/roBa/...` を指しているが、そのディレクトリは存在しない（リポジトリは `Zatu_Projects/LAMA/` にリネーム済み）。KiCadでライブラリが解決できない場合はこれが原因。
+**注意**: これらがリネーム前の旧 `roBa/` ディレクトリを指したままだと、KiCadでライブラリが解決できない（リポジトリは `LAMA/` にリネーム済み）。
 
 ### 電源設計
 
@@ -107,7 +107,6 @@ LEDは `caksoylar/zmk-rgbled-widget`（`v0.3-branch`、ZMKのバージョンと�
 
 ## リポジトリ運用
 
-- `.gitignore` が無いため、`.DS_Store` / KiCadの `.history/` / `export/` / `.kicad_prl` / `firmware/*.uf2` などが未追跡のまま大量に残っている。`git add -A` は避け、意図したファイルだけを個別にaddすること
-- `case/trackballcase.stl` はGit LFS管理（`.gitattributes`）
+- `.gitignore` で `.DS_Store` / KiCadの `.history/` / `export/` / `.kicad_prl` / `firmware/` などを除外している。それでも `git add -A` は避け、意図したファイルだけを個別にaddすること
 - ルートの `fix_L_step2.py` は過去の回路図一括修正に使った使い捨てスクリプト。パスが旧 `Zatu_Projects/roBa` でハードコードされており、そのままでは動かない
 - コミットメッセージは日本語
