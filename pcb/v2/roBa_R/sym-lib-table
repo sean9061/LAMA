@@ -1,4 +1,6 @@
 (sym_lib_table
   (version 7)
   (lib (name "roba")(type "KiCad")(uri "${ROBA_SYMBOL}/roba.kicad_sym")(options "")(descr ""))
+  (lib (name "Seeed_XIAO")(type "KiCad")(uri "${ROBA_SYMBOL}/Seeed_Studio_XIAO_Series.kicad_sym")(options "")(descr "Seeed Studio XIAO Series"))
+  (lib (name "TPS61221")(type "KiCad")(uri "${ROBA_V6_SYM}/2026-06-05_15-12-50.kicad_sym")(options "")(descr "TPS61221DCKR Boost Converter"))
 )

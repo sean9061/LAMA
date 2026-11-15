@@ -1,0 +1,23 @@
+(footprint "BatteryLead_Plus" (version 20240108) (generator "pcbnew") (generator_version "8.0")
+  (layer "F.Cu")
+  (descr "Battery positive lead solder pad, single THT hole")
+  (tags "battery lead wire solder pad plus")
+  (property "Reference" "BT" (at 0 -2.5 0) (layer "F.SilkS")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Value" "+" (at 0 2.5 0) (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (attr through_hole)
+
+  (fp_line (start -1.5 -1.5) (end 1.5 -1.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start 1.5 -1.5) (end 1.5 1.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start 1.5 1.5) (end -1.5 1.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start -1.5 1.5) (end -1.5 -1.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+
+  (fp_text user "+" (at 0 0 0) (layer "F.SilkS")
+    (effects (font (size 1.2 1.2) (thickness 0.2)))
+  )
+
+  (pad "1" thru_hole circle (at 0 0) (size 2.0 2.0) (drill 1.2) (layers "*.Cu" "*.Mask"))
+)
