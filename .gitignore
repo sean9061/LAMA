@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# KiCad のバックアップ・個人設定・書き出し
+*-backups/
+.history/
+*.kicad_prl
+*.lck
+fp-info-cache
+_autosave-*
+export/
+
+# ファームウェアのビルド成果物(GitHub Actions の artifacts から取る)
+firmware/
+build/
+*.uf2
+
+# ZMK をローカルでビルドしたときの west の作業ディレクトリ
+.west/
+zmk/
+zephyr/*
+!zephyr/module.yml
+modules/

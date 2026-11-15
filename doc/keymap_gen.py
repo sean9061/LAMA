@@ -13,7 +13,7 @@ KEYMAP = ROOT / "config" / "LAMA.keymap"
 LAYOUT = ROOT / "config" / "LAMA.json"
 OUT = ROOT / "doc" / "keymap.html"
 
-LAYER_NAMES = {0: "BASE", 1: "FUNCTION", 2: "NUM", 3: "ARROW", 4: "MOUSE", 5: "SCROLL", 6: "layer_6"}
+LAYER_NAMES = {0: "BASE", 1: "FUNCTION", 2: "NUM", 3: "ARROW", 4: "MOUSE", 5: "SCROLL", 6: "SYSTEM"}
 ENC_INDEX = 18  # 左手 row1 の Col6（エンコーダ押し込み、未配線）
 
 # ZMKのキー名 -> (表示ラベル, KeyboardEvent.code, 暗黙のShift)
@@ -118,7 +118,7 @@ def build_data():
     km = KEYMAP.read_text()
     layout = json.loads(LAYOUT.read_text())["layouts"]["default_layout"]["layout"]
     body = km[km.index("keymap {"):]
-    found = re.findall(r"\n        (\w+) \{\s*bindings = <(.*?)>;(.*?)\n        \};", body, flags=re.S)
+    found = re.findall(r"\n        (\w+) \{\s*(?:display-name = \"[^\"]*\";\s*)?bindings = <(.*?)>;(.*?)\n        \};", body, flags=re.S)
     layers = []
     for i, (_name, b, rest) in enumerate(found):
         bs = [x.strip() for x in re.split(r"(?=&)", b) if x.strip()]
